@@ -13,7 +13,7 @@ const Login = (props) => {
     })
 
     const verifyOtp = () => {
-        axios.post("http://localhost:5005/api/verifyOtp",{email:state.email,otp:state.otp}).then((response)=>{
+        axios.post("https://codestrixs-api.netlify.app/.netlify/functions/api/verifyOtp",{email:state.email,otp:state.otp}).then((response)=>{
             response.data.forEach(element => {
                 if(element.verified === 1){
                     alert("user verified");
@@ -40,7 +40,7 @@ const Login = (props) => {
     const handleOtp = (otp) => {console.log(otp);state.otp=otp}
 
     const sendmail=()=>{
-        axios.post("http://localhost:5005/mail",{tomail:state.email}).then((response)=>{
+        axios.post("https://codestrixs-api.netlify.app/.netlify/functions/api/mail",{tomail:state.email}).then((response)=>{
           if (response.data.msg === 'success'){
               alert("Email sent, awesome!"); 
               
@@ -66,7 +66,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('http://localhost:5005/api/register', payload)
+            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
@@ -109,7 +109,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('http://localhost:5005/api/login', payload)
+            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
