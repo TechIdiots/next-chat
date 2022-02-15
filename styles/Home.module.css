@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.container {
+  padding: 0 2rem;
+  background-image: url(../components/Assets/Land-Bg.png);
+  background-repeat: no-repeat;
+}
+
+.HomeContainer {
+  margin-top: 170px;
+  /* margin-left: 312px; */
+}
+
+.Context{
+  text-align: center;
+}
+
+.TopLine {
+  position: absolute;
+  margin-left: 341px;
+  margin-top: 226px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #A69B9B;
+}
+
+.ByLine {
+  position: absolute;
+  width: 612px;
+  height: 140.73px;
+  left: 312px;
+  top: 471px;
+
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 63px;
+  text-align: center;
+
+  color: #00ADB5;
+}
+
+.ByLine>span {
+  color: #000000;
+}
+
+.ByLine>div {
+  position: absolute;
+  width: 360px;
+  height: 63px;
+  left: 441px;
+  top: 536px;
+
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 63px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.HomeArt{
+  /* margin-top: 307px;
+  margin-left: 1048px;
+  /* background-image: url(../components/Assets/Home-Art.png); */
+  
+}
