@@ -5,7 +5,7 @@ const Login = (props) => {
     const [state , setState] = useState({
         email : "",
         password : "",
-        otp : "",
+        otp : "", 
         otpInputVisibility : true,
         otpSendButton : true,
         loginVisibility: false,
