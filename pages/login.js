@@ -66,7 +66,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
+            axios.post('https://cors-anywhere.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
