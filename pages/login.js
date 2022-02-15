@@ -66,7 +66,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
+            axios.post('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
@@ -109,7 +109,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
+            axios.post('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
