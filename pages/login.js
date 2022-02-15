@@ -100,7 +100,7 @@ const Login = (props) => {
     }
 
     const ckeckApiConnection = () => {
-        axios.get('https://cors-anywhere.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
+        axios.get('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
     }
     const fetchDetails = (e) => {
         e.preventDefault();
