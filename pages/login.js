@@ -100,7 +100,7 @@ const Login = (props) => {
     }
 
     const ckeckApiConnection = () => {
-        axios.get('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
+        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
     }
     const fetchDetails = (e) => {
         e.preventDefault();
@@ -109,7 +109,7 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('https://mycorsproxy-tuto.herokuapp.com/https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
+            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
                 .then(function (response) {
                     // console.log(response)
                     var val;
