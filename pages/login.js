@@ -68,24 +68,24 @@ const Login = (props) => {
             }
             axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
                 .then(function (response) {
-                    // console.log(response)
-                    var val;
-                    var tmp;
-                    for(var key in response.data){
-                        val = response.data[key];
-                        tmp = val;
-                    }
-                    if(val === 1){
-                        alert("Email Id already exists")
-                    }
-                    else if(val === "created"){
-                        alert(`user ${val}`),
-                        sendmail(),
-                        setState(prevState => ({
-                            ...prevState,
-                            otpInputVisibility:false,
-                        }))
-                    }
+                    console.log(response)
+                    // var val;
+                    // var tmp;
+                    // for(var key in response.data){
+                    //     val = response.data[key];
+                    //     tmp = val;
+                    // }
+                    // if(val === 1){
+                    //     alert("Email Id already exists")
+                    // }
+                    // else if(val === "created"){
+                    //     alert(`user ${val}`),
+                    //     sendmail(),
+                    //     setState(prevState => ({
+                    //         ...prevState,
+                    //         otpInputVisibility:false,
+                    //     }))
+                    // }
                 })
                 .catch(function (error) {
                     console.log(error);
