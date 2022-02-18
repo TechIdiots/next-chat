@@ -68,7 +68,7 @@ const Login = (props) => {
             }
             axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/register', payload)
                 .then(function (response) {
-                    console.log(response)
+                    console.log(response.data)
                     // var val;
                     // var tmp;
                     // for(var key in response.data){
