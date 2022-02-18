@@ -154,6 +154,7 @@ const Login = (props) => {
     }
   return (
     <div>
+        changed view
         <button onClick={ckeckApiConnection}>check console</button>
         { state.newUser ? 
             <div>
