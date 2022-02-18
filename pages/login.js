@@ -109,7 +109,13 @@ const Login = (props) => {
                 "email":state.email,
                 "password":state.password,
             }
-            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload)
+            const headers = {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            }
+            axios.post('https://codestrixs-api.netlify.app/.netlify/functions/api/login', payload, {
+                headers: headers
+            })
                 .then(function (response) {
                     // console.log(response)
                     var val;
