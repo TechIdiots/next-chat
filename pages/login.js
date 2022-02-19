@@ -160,6 +160,7 @@ const Login = (props) => {
     }
   return (
     <div>
+        
         <button onClick={ckeckApiConnection}>check console</button>
         { state.newUser ? 
             <div>

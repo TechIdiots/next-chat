@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "concurrently \"next dev\" \"cd .. && cd backend && nodemon index.js\" ",
     "build": "next build",
-    "start": "next start",
+    "start": "next start", 
     "lint": "next lint",
     "push": "git add . && git commit -m 'changed' && git push -u origin main"
   },
