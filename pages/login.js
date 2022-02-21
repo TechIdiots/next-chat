@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import OtpInput from 'react-otp-input';
+// import OtpInput from 'react-otp-input';
 const Login = (props) => {
     const [state , setState] = useState({
         email : "",
@@ -14,18 +14,19 @@ const Login = (props) => {
 
     const verifyOtp = () => {
         axios.post("https://codestrixs-api.netlify.app/.netlify/functions/api/verifyOtp",{email:state.email,otp:state.otp}).then((response)=>{
-            response.data.forEach(element => {
-                if(element.verified === 1){
-                    alert("user verified");
-                    setState(prevState => ({
-                        ...prevState,
-                        newUser: !state.newUser,
-                    }))
-                }
-                else if(element.verified === 0){
-                    alert("user Not Verified")
-                }
-            })
+            // response.data.forEach(element => {
+            //     if(element.verified === 1){
+            //         alert("user verified");
+            //         setState(prevState => ({
+            //             ...prevState,
+            //             newUser: !state.newUser,
+            //         }))
+            //     }
+            //     else if(element.verified === 0){
+            //         alert("user Not Verified");
+            //     }
+            // })
+            console.log(response.data)
       })
     }
 
@@ -148,6 +149,9 @@ const Login = (props) => {
                     }
                     else if(val === 0){
                         alert("verify your account")
+                        setState({
+                            otpInputVisibility: false,
+                        })
                     }
                     else if(tmp === "email does not exists"){
                         alert("email does not exists")
@@ -198,7 +202,16 @@ const Login = (props) => {
                 </div>
                 <div>
                     <input id="password" placeholder="password" value={state.password} onChange={handleChange}  hidden={state.loginVisibility}></input>
-                </div>
+                  </div>
+                  <div>
+                      <input id="otp" placeholder="Enter otp" hidden={state.otpInputVisibility} value={state.otp} onChange={handleChange}></input>
+                  </div>
+                  <div>
+                      <button hidden={state.otpInputVisibility} onClick={sendmail}>Resend Otp</button>
+                  </div>
+                  <div>
+                      <button hidden={state.otpInputVisibility} onClick={verifyOtp}>verify otp</button>
+                  </div>
                 <div>
                     <button onClick={fetchDetails} hidden={state.loginVisibility}>login</button>
                 </div>
