@@ -14,19 +14,19 @@ const Login = (props) => {
 
     const verifyOtp = () => {
         axios.post("https://codestrixs-api.netlify.app/.netlify/functions/api/verifyOtp",{email:state.email,otp:state.otp}).then((response)=>{
-            // response.data.forEach(element => {
-            //     if(element.verified === 1){
-            //         alert("user verified");
-            //         setState(prevState => ({
-            //             ...prevState,
-            //             newUser: !state.newUser,
-            //         }))
-            //     }
-            //     else if(element.verified === 0){
-            //         alert("user Not Verified");
-            //     }
-            // })
-            console.log(response.data)
+            response.data.forEach(element => {
+                if(element.verified === 1){
+                    alert("user verified");
+                    setState(prevState => ({
+                        ...prevState,
+                        newUser: !state.newUser,
+                    }))
+                }
+                else if(element.verified === 0){
+                    alert("user Not Verified");
+                }
+            })
+            // console.log(response.data)
       })
     }
 
