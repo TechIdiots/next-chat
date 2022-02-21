@@ -100,10 +100,10 @@ const Login = (props) => {
     }
 
     const ckeckApiConnection = () => {
-        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
+        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response.data)})
     }
     const ckeckDbConnection = () => {
-        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/check_db_con').then((response) => { console.log(response) })
+        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/check_db_con').then((response) => {console.log(response.data) })
     }
     const fetchDetails = (e) => {
         e.preventDefault();
