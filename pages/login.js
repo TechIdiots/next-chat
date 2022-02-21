@@ -102,6 +102,9 @@ const Login = (props) => {
     const ckeckApiConnection = () => {
         axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/').then((response)=>{console.log(response)})
     }
+    const ckeckDbConnection = () => {
+        axios.get('https://codestrixs-api.netlify.app/.netlify/functions/api/check_db_con').then((response) => { console.log(response) })
+    }
     const fetchDetails = (e) => {
         e.preventDefault();
         if(state.email.length && state.password.length) {
@@ -161,7 +164,8 @@ const Login = (props) => {
   return (
     <div>
         
-        <button onClick={ckeckApiConnection}>check console</button>
+          <button onClick={ckeckApiConnection}>check API Connection</button>
+          <button onClick={ckeckDbConnection}>check DB Connection</button>
         { state.newUser ? 
             <div>
                 <div>
