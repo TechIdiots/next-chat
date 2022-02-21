@@ -21,7 +21,7 @@ const Login = (props) => {
                         ...prevState,
                         newUser: !state.newUser,
                     }))
-                }
+                } 
                 else if(element.verified === 0){
                     alert("user Not Verified");
                 }
@@ -203,7 +203,7 @@ const Login = (props) => {
                 <div>
                     <input id="password" placeholder="password" value={state.password} onChange={handleChange}  hidden={state.loginVisibility}></input>
                   </div>
-                  <div>
+                  {/* <div>
                       <input id="otp" placeholder="Enter otp" hidden={state.otpInputVisibility} value={state.otp} onChange={handleChange}></input>
                   </div>
                   <div>
@@ -211,7 +211,7 @@ const Login = (props) => {
                   </div>
                   <div>
                       <button hidden={state.otpInputVisibility} onClick={verifyOtp}>verify otp</button>
-                  </div>
+                  </div> */}
                 <div>
                     <button onClick={fetchDetails} hidden={state.loginVisibility}>login</button>
                 </div>
